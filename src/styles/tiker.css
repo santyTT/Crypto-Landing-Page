@@ -1,0 +1,63 @@
+.ticker-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ticker-row {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.ticker-wrapper {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 20s linear infinite;
+    min-width: 200%; /* Duplica el contenido para hacer el efecto continuo */
+}
+
+.ticker-wrapper.reverse {
+    animation: scroll-right 20s linear infinite;
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    background: #2230429d;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    gap: 8px;
+    min-width: 130px;
+    justify-content: center;
+}
+
+.ticker-item img {
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Solo la mitad porque el contenido está duplicado */
+    }
+}
+
+@keyframes scroll-right {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

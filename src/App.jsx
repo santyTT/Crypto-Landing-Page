@@ -2,6 +2,7 @@ import Header from './components/header'
 import Home from './pages/home'
 import Carts from './components/cart'
 import SectionThird from './components/sectionThird'
+import Tiker from './components/scrollItems'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Home />
       <Carts />
       <SectionThird />
+      <Tiker />
     </div>
   )
 }
